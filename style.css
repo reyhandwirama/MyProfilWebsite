@@ -59,6 +59,17 @@
 
 .sidekiri {
     flex: 3;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.container1 h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 60px;
+}
+
+.nama-saya {
+    color: orange;
 }
 
 .sidekanan {
@@ -83,12 +94,19 @@
 }
 
 .sosmed {
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .sosmed h2 {
     width: 100%;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.facebook {
+    font-size: 20px;
 }
 
 .facebook ::before {
