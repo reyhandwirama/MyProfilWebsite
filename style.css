@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+/* Style Untuk Navbar Termasuk dengan buttonnya */
 .navbar {
     display: flex;
     width: 100%;
@@ -14,7 +15,6 @@
 
 .navbar-button ul {
     display: flex;
-    justify-content: space-between;
 }
 
 .navbar-button li {
@@ -39,48 +39,86 @@
     background-color: white;
 }
 
-.bagian1 {
-    width: 100%;
-    background-color: orange;
-    margin-top: 40px;
+
+/* Stle Untuk container dibawah web */
+
+.container1 {
+    width: 98%;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 1%;
+    border-radius: 15px;
     display: flex;
-    border-radius: 10px;
-    flex-wrap: wrap;
+    background-color: white;
+
 }
 
-.bagian-foto {
+.container1:hover {
+    box-shadow: 5px 6px 15px grey;
+}
+
+.sidekiri {
+    flex: 3;
+}
+
+.sidekanan {
     flex: 1;
+    display: flex;
+    margin: auto;
 }
 
 .foto {
-    width: 350px;
-    height: 350px;
+    background: url(foto1.jpg);
+    width: 380px;
+    height: 380px;
     border-radius: 50%;
-    margin-top: 25px;
-    margin-right: 1%;
-    background-image: url(foto1.jpg);
     background-size: cover;
-    background-position-x: -45px;
+    background-position-x: -40px;
 
 }
 
-.nama {
-    width: 80%;
+.sosmed h3 {
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .sosmed {
-    width: 80%;
-    background-color: black;
-    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.sosmed h2 {
+    width: 100%;
+}
+
+.facebook ::before {
+    content: "";
+    background: url(fb.png);
+    height: 30px;
+    width: 30px;
+    display: block;
+    background-size: cover;
+    float: left;
+    margin-right: 10px;
+}
+
+.instagram ::before {
+    content: "";
+    background: url(ig.png);
+    background-size: cover;
+    float: left;
+    display: block;
+    width: 40px;
+    height: 35px;
+    margin-right: 10px;
+    margin-top: -4px;
+
+}
+
 
 @media only screen and (max-width: 820px) {
     .navbar li a {
         font-size: 12px;
         padding: 10px;
-    }
-
-    .nama {
-        flex: 1;
     }
 }
