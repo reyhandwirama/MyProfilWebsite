@@ -3,11 +3,25 @@
     padding: 0;
 }
 
+body {
+    background-color: #fffdf5;
+}
+
+@font-face {
+    font-family: "Brandon Grotesque Bold";
+    src: url("//db.onlinewebfonts.com/t/6cec834e2e8f2e4206567ed75e1281d4.eot");
+    src: url("//db.onlinewebfonts.com/t/6cec834e2e8f2e4206567ed75e1281d4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6cec834e2e8f2e4206567ed75e1281d4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6cec834e2e8f2e4206567ed75e1281d4.woff") format("woff"), url("//db.onlinewebfonts.com/t/6cec834e2e8f2e4206567ed75e1281d4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6cec834e2e8f2e4206567ed75e1281d4.svg#Brandon Grotesque Bold") format("svg");
+}
+
 /* Style Untuk Navbar Termasuk dengan buttonnya */
 .navbar {
     display: flex;
     width: 100%;
+    position: fixed;
     height: 40px;
+    margin-top: -20px;
+    z-index: 5;
+    box-sizing: border-box;
     background: linear-gradient(to right, #ff105f, #ffad06);
     align-items: center;
     justify-content: center;
@@ -49,12 +63,18 @@
     margin-left: 1%;
     border-radius: 15px;
     display: flex;
+    position: relative;
+    top: 40px;
+    border-top-left-radius: 50px;
+    box-shadow: 2px 3px 3px grey;
     background-color: white;
+    transition: 0.2s;
 
 }
 
 .container1:hover {
     box-shadow: 5px 6px 15px grey;
+    transition: 0.2s;
 }
 
 .sidekiri {
@@ -76,22 +96,28 @@
     flex: 1;
     display: flex;
     margin: auto;
+    margin-right: 2%;
 }
 
 .foto {
-    background: url(foto1.jpg);
+    background: url(/media/foto1.jpg);
     width: 380px;
     height: 380px;
     border-radius: 50%;
     background-size: cover;
     background-position-x: -40px;
+    transition: 0.3s;
+    margin-left: 20px;
+
 
 }
 
-.sosmed h3 {
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.foto:hover {
+    box-shadow: 4px 4px 4px grey;
+    transform: scale(1.2) rotate(0.01deg);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 
 .sosmed {
     margin-top: 50px;
@@ -102,41 +128,287 @@
 .sosmed h2 {
     width: 100%;
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
+}
+
+.sosmed div {
+    margin-right: 50px;
+    transition: 0.2s;
 }
 
 .facebook {
-    font-size: 20px;
-}
-
-.facebook ::before {
-    content: "";
-    background: url(fb.png);
-    height: 30px;
-    width: 30px;
-    display: block;
+    width: 80px;
+    height: 80px;
+    background: url(/media/fb.png);
     background-size: cover;
-    float: left;
-    margin-right: 10px;
 }
 
-.instagram ::before {
-    content: "";
-    background: url(ig.png);
+.sosmed a :hover {
+    transform: scale(1.4);
+    transition: 0.2s;
+}
+
+
+.instagram {
+    width: 80px;
+    height: 80px;
+    background: url(/media/ig.png);
     background-size: cover;
-    float: left;
-    display: block;
-    width: 40px;
-    height: 35px;
-    margin-right: 10px;
-    margin-top: -4px;
+}
+
+.github {
+    width: 80px;
+    height: 80px;
+    background: url(/media/github.png);
+    background-size: cover;
+}
+
+.linkedin {
+    width: 80px;
+    height: 80px;
+    background: url(/media/linkedin.png);
+    background-size: cover;
+}
+
+/* Container 2  */
+
+.titlecontainer2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Brandon Grotesque Bold";
 
 }
 
+.titlecontainer2 h2::before,
+.titlecontainer2 h2::after {
+    content: "";
+    display: inline-block;
+    border-top: .3rem solid black;
+    width: 4rem;
+    margin: 0 1rem;
+    transform: translateY(-0.8rem);
+}
 
-@media only screen and (max-width: 820px) {
-    .navbar li a {
-        font-size: 12px;
-        padding: 10px;
+.container2 {
+    width: 98%;
+    margin-left: 1%;
+    height: 400px;
+    box-shadow: 2px 3px 3px grey;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.container2:hover {
+    box-shadow: 5px 6px 15px grey;
+    transition: 0.2s;
+}
+
+
+@media only screen and (min-width: 997px) and (max-width: 1327px) {
+    .container1 {
+        height: 450px;
     }
+
+    .titlecontainer2 {
+        font-size: 19px;
+    }
+
+    .titlecontainer2 h2::before,
+    .titlecontainer2 h2::after {
+        content: "";
+        display: inline-block;
+        border-top: .3rem solid black;
+        width: 2rem;
+        margin: 0 1rem;
+        transform: translateY(-0.3rem);
+        transition: 0.5;
+    }
+}
+
+@media only screen and (min-width : 765px) and (max-width : 996px) {
+    .container1 {
+        height: 580px;
+    }
+
+    .sidekiri h1 {
+        font-size: 50px;
+    }
+
+    .sosmed div {
+        margin-top: 10px;
+    }
+
+
+}
+
+@media only screen and (orientation: landscape) and (max-width: 764px) {
+    .navbar-button {
+        display: none;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .container1 {
+        height: 320px;
+    }
+
+    .foto {
+        width: 250px;
+        height: 250px;
+        margin-right: 5px;
+
+    }
+
+    .container1 h1 {
+        font-size: 30px;
+    }
+
+    .sosmed div {
+        margin-right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .titlecontainer2 {
+        font-size: 11px;
+    }
+
+}
+
+@media only screen and (orientation: portrait) {
+    .navbar-button {
+        display: none;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .container1 {
+        height: 250px;
+    }
+
+    .foto {
+        width: 200px;
+        height: 200px;
+        margin-right: 5px;
+        background-position: -20px;
+
+    }
+
+    .container1 h1 {
+        font-size: 30px;
+    }
+
+    .sosmed h2 {
+        font-size: 20px;
+        margin-top: -30px;
+        margin-bottom: -20px;
+    }
+
+    .sosmed div {
+        margin-right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .titlecontainer2 {
+        font-size: 17px;
+    }
+
+    .titlecontainer2 h2::before,
+    .titlecontainer2 h2::after {
+        content: "";
+        display: inline-block;
+        border-top: .3rem solid black;
+        width: 2rem;
+        margin: 0 1rem;
+        transform: translateY(-0.3rem);
+    }
+
+
+}
+
+@media only screen and (max-width: 583px) {
+    .container1 {
+        height: 300px;
+    }
+
+    .foto {
+        width: 200px;
+        height: 200px;
+        background-position: -20px;
+    }
+}
+
+@media only screen and (max-width : 531px) {
+    .container1 {
+        height: 340px;
+    }
+
+}
+
+@media only screen and (max-width :428px) {
+    .container1 {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 500px;
+
+    }
+
+    .sidekiri {
+        flex: 1;
+    }
+
+    .sidekanan {
+        flex: 1;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .foto {
+        margin-left: 0px;
+    }
+
+    .titlecontainer2 {
+        font-size: 14px;
+    }
+
+    .titlecontainer2 h2::before,
+    .titlecontainer2 h2::after {
+        content: "";
+        display: inline-block;
+        border-top: .3rem solid black;
+        width: 1rem;
+        margin: 0 0.4rem;
+        transform: translateY(-0.3rem);
+    }
+}
+
+@media only screen and (max-width: 223px) {
+    .foto {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sidekiri h1 {
+        font-size: 24px;
+    }
+
+    .sidekiri {
+        height: 50px;
+    }
+
+    .sosmed div {
+        height: 30px;
+        width: 30px;
+    }
+
 }
