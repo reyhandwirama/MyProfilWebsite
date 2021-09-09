@@ -20,16 +20,17 @@
         </a>
         <div class="navbar-button">
             <ul>
-                <li><a href="#">Tentang Saya</a></li>
+                <li><a href="#tentang-saya">Tentang Saya</a></li>
                 <li><a href="#">Pendidikan Saya</a></li>
                 <li><a href="#">Ketertarikan Saya</a></li>
                 <li><a href="#">Hobi Saya</a></li>
             </ul>
 
         </div>
+        
     </div>
-
-    <div class="container1">
+    <section>
+    <div class="container1 reveal active" >
         <div class="sidekiri">
             <h1 class="nama">Halo Saya , <br><span class="nama-saya">Muhammad Reyhan Dwi Rama </span></h1>
             <div class="sosmed">
@@ -44,21 +45,57 @@
             <div class="foto"></div>
         </div>
     </div>
+    <div class="wave" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffad06" fill-opacity="1" d="M0,64L48,101.3C96,139,192,213,288,250.7C384,288,480,288,576,245.3C672,203,768,117,864,117.3C960,117,1056,203,1152,197.3C1248,192,1344,96,1392,48L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    </div>
+    </section>
 
-    <div class="titlecontainer2">
+<section>
+
+</a>
+    <div class="titlecontainer2 reveal">
         <h2>Tentang Saya</h2>
     </div>
-    <div class="container2">
-        <div class="fotokiri"></div>
-        <div class="deskripsi"></div>
+    
+    <div class="container2 reveal" >
+        <div class="sidekiri2"></div>
+        <div class="sidekanan2">
+            <div class="headercontent">
+                <q>Everything big starts from something small, So don't be afraid to start</q>
+            </div>
+            <div class="bodycontent">
+                <p>Hello, My full name is Muhammad Reyhan Dwi Rama . I'm an student from informatics engineering in gunadarma university who is interested in buliding web and android apps. i'm more intrested in frond end developers or backend deveolpers than UI/UX. Because i'm interested in programming languages and logics that must be completed in that field. I'm intrested in technology since i was little.Starting from interested being interested in studying electronic components until now i'am interested in making an software. </p>
+            </div>
+        </div>
     </div>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffad06" fill-opacity="1" d="M0,64L48,101.3C96,139,192,213,288,250.7C384,288,480,288,576,245.3C672,203,768,117,864,117.3C960,117,1056,203,1152,197.3C1248,192,1344,96,1392,48L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+</section>
 <script>
     const tooglebutton = document.getElementsByClassName('toogle-button')[0]
     const navbarlink = document.getElementsByClassName('navbar-button')[0]
     tooglebutton.addEventListener('click',() => {
         navbarlink.classList.toggle('active')
     })
+
+    window.addEventListener('scroll',reveal);
+
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+
+        for(var i = 0; i<reveals.length; i++){
+
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 200;
+
+            if(revealtop<windowheight - revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
 </script>
 </body>
 
