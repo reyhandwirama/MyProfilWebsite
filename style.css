@@ -53,6 +53,23 @@ body {
     background-color: white;
 }
 
+.toogle-button {
+    position: absolute;
+    top: 0.55rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toogle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
 
 /* Stle Untuk container dibawah web */
 
@@ -247,12 +264,43 @@ body {
 }
 
 @media only screen and (orientation: landscape) and (max-width: 764px) {
+    .toogle-button {
+        display: flex;
+    }
+
+
     .navbar-button {
         display: none;
+        margin-top: 300px;
+        width: 100%;
+
     }
 
     .navbar {
         width: 100%;
+    }
+
+    .navbar-button ul {
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .navbar-button li {
+        text-align: center;
+        position: relative;
+        top: -24px;
+        padding: 1rem;
+        width: 100%;
+        background: linear-gradient(to right, #ff105f, #ffad06);
+    }
+
+    .navbar-button li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-button.active {
+        display: flex;
     }
 
     .container1 {
@@ -280,15 +328,54 @@ body {
         font-size: 11px;
     }
 
+    .titlecontainer2 h2::before,
+    .titlecontainer2 h2::after {
+        content: "";
+        display: inline-block;
+        border-top: .3rem solid black;
+        width: 2rem;
+        margin: 0 1rem;
+        transform: translateY(-0.3rem);
+    }
+
 }
 
 @media only screen and (orientation: portrait) {
+    .toogle-button {
+        display: flex;
+    }
+
+
     .navbar-button {
         display: none;
+        margin-top: 250px;
+        width: 100%;
+
     }
 
     .navbar {
         width: 100%;
+    }
+
+    .navbar-button ul {
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .navbar-button li {
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        background: linear-gradient(to right, #ff105f, #ffad06);
+    }
+
+    .navbar-button li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-button.active {
+        display: flex;
     }
 
     .container1 {
